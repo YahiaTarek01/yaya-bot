@@ -59,6 +59,8 @@ def af3al(message):
 @bot.message_handler(func=lambda message: message.text in verbs.keys())
 def show_verb(message):
     bot.send_message(message.chat.id, verbs[message.text])
+    with open("image-180917490670702626.jpg", "rb") as photo:
+    bot.send_photo(message.chat.id, photo, caption="هذه صورة مرسلة من البوت!")
 
 
 
